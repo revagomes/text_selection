@@ -1,0 +1,8 @@
+<?php
+/**
+ * Implements hook_uninstall().
+ */
+function text_selection_uninstall() {
+  variable_del('text_selection_bg_color');
+  variable_del('text_selection_font_color');
+}
