@@ -19,6 +19,18 @@ function text_selection_menu() {
 }
 
 /**
+ * Implements hook_permission().
+ */
+function text_selection_permission() {
+  return array(
+    'administer Text Selection' => array(
+      'title' => t('Set text selection color'),
+      'description' => t('Allow modification of the browser/system text selection default color on the website.'),
+    )
+  );
+}
+
+/**
  * Override or insert variables into the html templates.
  *
  * @param $variables
