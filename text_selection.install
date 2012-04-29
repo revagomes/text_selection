@@ -1,5 +1,10 @@
 <?php
 /**
+ * @file
+ * Install, update, and uninstall functions for the TExt Selection module.
+ */
+
+/**
  * Implements hook_uninstall().
  */
 function text_selection_uninstall() {

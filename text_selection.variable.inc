@@ -11,7 +11,6 @@ function text_selection_variable_info($options) {
   $variable['text_selection_bg_color'] = array(
     'title' => t('Text selection background color'),
     'type' => 'text',
-    
   );
   $variable['text_selection_bg_color'] = array(
     'title' => t('Text selection font color'),

@@ -3,6 +3,3 @@ description = "Overrides the default text selection color of the browser/system.
 core = 7.x
 
 configure = admin/config/content/text-selection
-
-files[] = text_selection.variable.inc
-files[] = text_selection.admin.inc

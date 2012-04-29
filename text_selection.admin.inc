@@ -1,7 +1,6 @@
 <?php
 /**
- * @file
- * Text Selection module - Admin UI
+ * @file Text Selection module - Admin UI
  */
 
 /**
@@ -40,16 +39,16 @@ function text_selection_settings_form() {
  */
 function text_selection_settings_form_validate($form, &$form_state) {
   if (!empty($form_state['values']['text_selection_bg_color'])) {
-		$bgColor = $form_state['values']['text_selection_bg_color'];
-		if(!preg_match("/^(#)?([0-9a-fA-F]{3})([0-9a-fA-F]{3})?$/", $bgColor)){
-			form_set_error('error', t('The background color must fit the hexadecimal HTML color default format.'));
-		}
+    $bg_color = $form_state['values']['text_selection_bg_color'];
+    if (!preg_match("/^(#)?([0-9a-fA-F]{3})([0-9a-fA-F]{3})?$/", $bg_color)) {
+      form_set_error('error', t('The background color must fit the hexadecimal HTML color default format.'));
+    }
   }
   if (!empty($form_state['values']['text_selection_font_color'])) {
-		$fontColor = $form_state['values']['text_selection_font_color'];
-		if(!preg_match("/^(#)?([0-9a-fA-F]{3})([0-9a-fA-F]{3})?$/", $fontColor)){
-			form_set_error('error', t('The font color must fit the hexadecimal HTML color default format.'));
-		}
+    $font_color = $form_state['values']['text_selection_font_color'];
+    if (!preg_match("/^(#)?([0-9a-fA-F]{3})([0-9a-fA-F]{3})?$/", $font_color)) {
+      form_set_error('error', t('The font color must fit the hexadecimal HTML color default format.'));
+    }
   }
 }
 
