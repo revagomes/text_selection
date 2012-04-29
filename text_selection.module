@@ -1,0 +1,19 @@
+<?php 
+/**
+ * Implements hook_menu().
+ */
+function text_selection_menu() {
+  $items = array();
+
+  $items['admin/config/user-interface/text-selection'] = array(
+    'title' => 'Text Selection configuration',
+    'description' => 'Configure the text selection color. Set the background and font color for selected text on your site.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('text_selection_settings_form'),
+    'access callback' => 'user_access',
+    'access arguments' => array('administer Text Selection'),
+    'file' => 'text_selection.admin.inc'
+  );
+
+  return $items;
+}
