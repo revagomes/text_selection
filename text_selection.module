@@ -17,3 +17,25 @@ function text_selection_menu() {
 
   return $items;
 }
+
+/**
+ * Override or insert variables into the html templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("html" in this case.)
+ */
+
+function text_selection_preprocess_html(&$variables, $hook) {
+  $cssRole = '*::selection{background:<bg_clr>;color:<ft_clr>;} *::-moz-selection{background:<bg_clr>;color:<ft_clr>;} *::-webkit-selection{background:<bg_clr>;color:<ft_clr>;}';
+  
+  $bgColor = variable_get('text_selection_bg_color', '');
+  $fontColor = variable_get('text_selection_font_color', '');
+  
+  if((!empty($bgColor)) || (!empty($fontColor))){
+    $cssRole = preg_replace("/<bg_clr>/", $bgColor, $cssRole);
+    $cssRole = preg_replace("/<ft_clr>/", $fontColor, $cssRole);
+    drupal_add_css($cssRole, array('group' => CSS_THEME, 'type' => 'inline', 'every_page' => TRUE));
+  }
+}
