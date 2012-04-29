@@ -1,6 +1,7 @@
 <?php
 /**
- * @file Text Selection module - Admin UI
+ * @file
+ * Administration UI functions for the Text Selection module.
  */
 
 /**

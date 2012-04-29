@@ -1,6 +1,7 @@
 <?php 
 /**
- * @file Text Selection module - core functions.
+ * @file 
+ * Core functions for the Text Selection module.
  */
 
 /**
@@ -30,7 +31,7 @@ function text_selection_permission() {
     'administer Text Selection' => array(
       'title' => t('Set text selection color'),
       'description' => t('Allow modification of the browser/system text selection default color on the website.'),
-    )
+    ),
   );
 }
 
@@ -43,7 +44,7 @@ function text_selection_preprocess_html(&$variables, $hook) {
   $font_color = variable_get('text_selection_font_color', '');
 
   if ((!empty($bg_color)) || (!empty($font_color))) {
-    $css_role = preg_replace("/<bg_clr>/", $bgColor, $css_role);
+    $css_role = preg_replace("/<bg_clr>/", $bg_color, $css_role);
     $css_role = preg_replace("/<ft_clr>/", $font_color, $css_role);
     drupal_add_css($css_role, array(
       'group' => CSS_THEME,
