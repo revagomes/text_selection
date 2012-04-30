@@ -7,9 +7,9 @@ DESCRIPTION:
 This module allows you to override the browser-level or system-level
 text highlight color with a color of your choosing.
 
-For example, when you select a text on a website to paste it in another 
-software the highlighted text have a default background color and font
-color. Using this module you are able to modify this settings to fit to
+For example, when you select a text on a website to copy and paste it
+the highlighted text have a default background color and font color.
+Using this module you are able to modify this settings to fit to
 the website's visual identity.
 
 REQUIREMENTS:
