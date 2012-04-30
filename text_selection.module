@@ -11,8 +11,8 @@ function text_selection_menu() {
   $items = array();
 
   $items['admin/config/user-interface/text-selection'] = array(
-    'title' => 'Text Selection configuration',
-    'description' => 'Configure the text selection color. Set the background and font color for selected text on your site.',
+    'title' => t('Text Selection Settings'),
+    'description' => t('Configure the text selection highlight color. Set the background and font color for selected text on your site.'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('text_selection_settings_form'),
     'access callback' => 'user_access',
@@ -30,7 +30,7 @@ function text_selection_permission() {
   return array(
     'administer Text Selection' => array(
       'title' => t('Set text selection color'),
-      'description' => t('Allow modification of the browser/system text selection default color on the website.'),
+      'description' => t('Allow modification of the browser-level/system-level text selection default highlight color on the website.'),
     ),
   );
 }

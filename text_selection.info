@@ -1,5 +1,5 @@
-name = "Text Selection Color"
-description = "Overrides the default text selection color of the browser/system."
+name = "Text Selection"
+description = "Overrides the default text selection highlight color of the browser."
 core = 7.x
 
 configure = admin/config/content/text-selection

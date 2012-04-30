@@ -16,6 +16,5 @@ function text_selection_variable_info($options) {
     'title' => t('Text selection font color'),
     'type' => 'text',
   );
-
   return $variable;
 }
