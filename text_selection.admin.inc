@@ -17,7 +17,7 @@ function text_selection_settings_form() {
     '#size' => 7,
     '#maxlength' => 7,
     '#title' => t('Background Color'),
-    '#default_value' => variable_get('text_selection_bg_color', ''),
+    '#default_value' => variable_get('text_selection_bg_color', '#000000'),
     '#description' => t('Determines the background color for text selection. Format: #000000.'),
   );
   $form['text_selection_font_color'] = array(
@@ -25,7 +25,7 @@ function text_selection_settings_form() {
     '#size' => 7,
     '#maxlength' => 7,
     '#title' => t('Font Color'),
-    '#default_value' => variable_get('text_selection_font_color', ''),
+    '#default_value' => variable_get('text_selection_font_color', '#FFFFFF'),
     '#description' => t('Determines the font color for text selection. Format: #FFFFFF.'),
   );
 
