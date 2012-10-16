@@ -20,7 +20,7 @@ INSTALLATION:
 
 @see http://drupal.org/documentation/install/modules-themes/modules-7
 
-ONFIGURATION:
+CONFIGURATION:
 
 If you want anyone besides the administrative user to be able
 to configure text selecion colors, they must be given the
@@ -28,4 +28,4 @@ to configure text selecion colors, they must be given the
 
 When the module is enabled and the user has the "administer
 Text Selection" permission, an "Text Selection Settings" menu
-should appear under Configuration > User Iterface in the menu system.
+should appear under Configuration > User Interface in the menu system.

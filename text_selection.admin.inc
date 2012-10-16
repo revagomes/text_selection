@@ -42,14 +42,20 @@ function text_selection_settings_form_validate($form, &$form_state) {
   if (!empty($form_state['values']['text_selection_bg_color'])) {
     $bg_color = $form_state['values']['text_selection_bg_color'];
     if (!preg_match("/^(#)([0-9a-fA-F]{3})([0-9a-fA-F]{3})?$/", $bg_color)) {
-      form_set_error('error', t('The background color must fit the hexadecimal HTML color default format.'));
+      form_set_error('text_selection_bg_color', t('The background color must fit the hexadecimal HTML color default format.'));
     }
+  }
+  else{
+    form_set_error('text_selection_bg_color', t('The background color value is missing.'));
   }
   if (!empty($form_state['values']['text_selection_font_color'])) {
     $font_color = $form_state['values']['text_selection_font_color'];
     if (!preg_match("/^(#)([0-9a-fA-F]{3})([0-9a-fA-F]{3})?$/", $font_color)) {
-      form_set_error('error', t('The font color must fit the hexadecimal HTML color default format.'));
+      form_set_error('text_selection_font_color', t('The font color must fit the hexadecimal HTML color default format.'));
     }
+  }
+  else{
+    form_set_error('text_selection_font_color', t('The font color value is missing.'));
   }
 }
 
