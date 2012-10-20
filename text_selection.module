@@ -36,9 +36,9 @@ function text_selection_permission() {
 }
 
 /**
- * Override or insert variables into the html template.
+ * Implements hook_preprocess_html().
  */
-function text_selection_preprocess_html(&$variables, $hook) {
+function text_selection_preprocess_html(&$variables) {
   $css_role   = '*::selection{background:<bg_clr>;color:<ft_clr>;} *::-moz-selection{background:<bg_clr>;color:<ft_clr>;} *::-webkit-selection{background:<bg_clr>;color:<ft_clr>;}';
   $bg_color   = variable_get('text_selection_bg_color', '#000000');
   $font_color = variable_get('text_selection_font_color', '#FFFFFF');

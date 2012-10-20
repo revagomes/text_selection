@@ -1,6 +1,7 @@
 <?php
 /**
- * @file Text Selection module - Variables declaration
+ * @file
+ * Text Selection module - Variables declaration
  */
 
 /**

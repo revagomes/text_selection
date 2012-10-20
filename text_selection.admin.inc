@@ -45,7 +45,7 @@ function text_selection_settings_form_validate($form, &$form_state) {
       form_set_error('text_selection_bg_color', t('The background color must fit the hexadecimal HTML color default format.'));
     }
   }
-  else{
+  else {
     form_set_error('text_selection_bg_color', t('The background color value is missing.'));
   }
   if (!empty($form_state['values']['text_selection_font_color'])) {
@@ -54,7 +54,7 @@ function text_selection_settings_form_validate($form, &$form_state) {
       form_set_error('text_selection_font_color', t('The font color must fit the hexadecimal HTML color default format.'));
     }
   }
-  else{
+  else {
     form_set_error('text_selection_font_color', t('The font color value is missing.'));
   }
 }
